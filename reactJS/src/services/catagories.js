@@ -1,19 +1,20 @@
-import axios from "axios";
+import axiosInstance from './axiosConfig';
 class CatagoryDataService {
+    
     getAll() {
+        return axiosInstance.get("/category");
+    }
 
-        return axios.get("http://localhost:3001/category");
-    }
     getAllDetail(typeId) {
-        return axios.get(
-            `http://localhost:3001/category/${typeId}/category-detail`
-        );
+        return axiosInstance.get(`/category/${typeId}/category-detail`);
     }
+
     getCataDetailById(detailId) {
-        return axios.get(`http://localhost:3001/category-detail/${detailId}`);
+        return axiosInstance.get(`/category-detail/${detailId}`);
     }
+
     getAllCataDetail() {
-        return axios.get("http://localhost:3001/product/category-detail");
+        return axiosInstance.get("/product/category-detail");
     }
 }
 export default new CatagoryDataService();

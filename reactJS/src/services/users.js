@@ -1,29 +1,36 @@
-import axios from "axios";
+import axiosInstance from './axiosConfig';
 
 class UserDataService {
     async getAllUser() {
-        return await axios.get("http://localhost:3001/admin/user/show")
+        return await axiosInstance.get("/admin/user/show")
     }
+
     async getUserById(userId) {
-        return await axios.get(`http://localhost:3001/user/${userId}`)
+        return await axiosInstance.get(`/user/${userId}`)
     }
+
     async createUser(data) {
-        return await axios.post("http://localhost:3001/user/register",data)
+        return await axiosInstance.post("/user/register",data)
     }
+
     async editUser(userId, data) {
-        return await axios.put(`http://localhost:3001/admin/user/edit/${userId}`, data)
+        return await axiosInstance.put(`/admin/user/edit/${userId}`, data)
     }
+
     async deleteUser(userId) {
-        return await axios.delete(`http://localhost:3001/admin/user/delete/${userId}`)
+        return await axiosInstance.delete(`/admin/user/delete/${userId}`)
     }
+
     async createComment(productId, userId, data){
-        return await axios.post(`http://localhost:3001/user/${userId}/product/${productId}/comment`, data)
+        return await axiosInstance.post(`/user/${userId}/product/${productId}/comment`, data)
     }
+
     async deleteComment(userId, commentId){
-        return await axios.delete(`http://localhost:3001/user/${userId}/comment/${commentId}/delete`)
+        return await axiosInstance.delete(`/user/${userId}/comment/${commentId}/delete`)
     }
+    
     async getOrdersByUser(userId){
-        return await axios.get(`http://localhost:3001/user/${userId}/order`)
+        return await axiosInstance.get(`/user/${userId}/order`)
     }
 }
 

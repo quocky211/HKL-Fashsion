@@ -1,22 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {
-  Form,
-  Button,
-  Alert,
-  Container,
-  Col,
-  Row,
-} from "react-bootstrap";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBTextArea,
-  MDBTypography,
-} from "mdb-react-ui-kit";
+import {Form,Button,Alert,Container,Col,Row} from "react-bootstrap";
+import { MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBRow, MDBTextArea, MDBTypography} from "mdb-react-ui-kit";
 import "./CommentForm.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import UserDataService from "../../services/users";
@@ -24,16 +8,7 @@ import ProductDataService from "../../services/products";
 import { formatDistanceToNow } from "date-fns";
 import { vi } from "date-fns/locale";
 
-//Dữ liệu fake
-// const commentsFakeData = [
-//   { name: "Minh Đại", comment: "Sản phẩm ok đó!", rating: 4 },
-//   { name: "Chanh Chanh", comment: "Quá chất lượng!", rating: 5 },
-// ];
-
-//Kiểm tra trạng thái đăng nhập
-const tokens = JSON.parse(localStorage.getItem("JWT"));
-
-//Lấy thông tin người dùng đã đăng nhập
+const tokens = localStorage.getItem("JWT") ?? '';
 const user = JSON.parse(localStorage.getItem("user"));
 
 const CommentAndComentList = (props) => {
@@ -45,7 +20,6 @@ const CommentAndComentList = (props) => {
   const retrieveComments = () => {
     ProductDataService.getCommentsByProductId(props.productId)
       .then((res) => {
-        console.log(res.data);
         setComments(res.data);
       })
       .catch((e) => {
@@ -125,7 +99,7 @@ const CommentAndComentList = (props) => {
       <span>&nbsp;</span>
       <Container>
         <Row className="justify-content-center">
-          {tokens === null && (
+          {tokens == '' && (
             <Col lg={6} md={10} xs={9} className="notify">
               <Alert variant="warning">
                 Vui lòng đăng nhập để để lại đánh giá của bạn.
@@ -133,11 +107,7 @@ const CommentAndComentList = (props) => {
             </Col>
           )}
         </Row>
-        {tokens !== null && (
-          // <CommentForm
-          //   onCommentSubmit={handleCommentSubmit}
-          //   productId={props.productId}
-          // />
+        {tokens != '' && (
           <section className="vh-80" style={{ backgroundColor: "#ffff" }}>
             <Form onSubmit={handleSubmit}>
               <MDBContainer className="py-5" style={{ maxWidth: "1000px" }}>
@@ -171,13 +141,6 @@ const CommentAndComentList = (props) => {
                                   &#9733;
                                 </span>
                               ))}
-                              {/* <a href="">
-                            <MDBIcon far icon="star text-danger me-1" />
-                            <MDBIcon far icon="star text-danger me-1" />
-                            <MDBIcon far icon="star text-danger me-1" />
-                            <MDBIcon far icon="star text-danger me-1" />
-                            <MDBIcon far icon="star text-danger me-1" />
-                          </a> */}
                             </div>
                             <MDBTextArea
                               value={comment}

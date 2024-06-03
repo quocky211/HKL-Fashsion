@@ -32,7 +32,6 @@ function Register() {
         config
       )
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           navigate("/Login");
           alert("Đăng ký thành công");

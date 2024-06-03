@@ -29,32 +29,20 @@ const handleShow = () => setShow(true);
         "Content-Type": "application/json",
       },
     };
-    await axios
-      .post(
-        "http://localhost:3001/user/login",
-        user,
-        config
-      )
+    await axios.post( "http://localhost:3001/user/login",user,config)
       .then((res) => {
-        if(res.data.accessToken)
+        // console.log(res.data);
+        if(res.data.accessToken && res.data.jsonUser)
         {
-          window.localStorage.setItem(
-            "JWT",
-            JSON.stringify(res.data.accessToken)
-          );
-          window.localStorage.setItem(
-            "refreshToken",
-            JSON.stringify(res.data.refreshToken)
-          );
-          window.localStorage.setItem("user", JSON.stringify(res.data.user));
+          window.localStorage.setItem("JWT", res.data.accessToken);
+          window.localStorage.setItem("refreshToken",res.data.refreshToken);
+          window.localStorage.setItem("user", JSON.stringify(res.data.jsonUser));
           window.localStorage.setItem("Email", useremail);
         }
         else{
           handleShow()
         }
-
-        //console.log(res.data.user.level)
-        if (res.data.user.level === true) navigate("/Admin");
+        if (res.data.jsonUser.level === true) navigate("/Admin");
         else navigate("/");
       })
       .catch((err) => {

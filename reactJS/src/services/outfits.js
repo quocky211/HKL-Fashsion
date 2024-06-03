@@ -1,15 +1,17 @@
-import axios from "axios";
+import axiosInstance from './axiosConfig';
+
 class OutfitDataService {
 
     async getAllOutfit(page = 1) {
-        return await axios.get(`http://localhost:3001/product/outfit?page=${page}`)
+        return await axiosInstance.get(`/product/outfit?page=${page}`);
     }
-    async getOutfitById(Id) {
 
-        return await axios.get(`http://localhost:3001/product/outfit/${Id}`)
+    async getOutfitById(Id) {
+        return await axiosInstance.get(`/product/outfit/${Id}`);
     }
+    
     async getOutfitDetails(outfitId){
-        return await axios.get(`http://localhost:3001/product/outfit/${outfitId}/outfit-detail`)
+        return await axiosInstance.get(`/product/outfit/${outfitId}/outfit-detail`);
     }
 
 }

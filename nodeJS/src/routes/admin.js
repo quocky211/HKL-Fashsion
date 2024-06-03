@@ -2,6 +2,9 @@ const express = require('express');
 const adminController = require('../app/controllers/adminController');
 const router = express.Router();
 const uploadCloud = require('../helpers/uploader.js');
+const verifyAccessToken = require('../middleware/verifyAccessToken.js');
+
+router.use(verifyAccessToken);
 // product
 router.get('/product', adminController.ShowProduct);
 router.get('/product/:id/product-detail', adminController.ShowProductDetail);

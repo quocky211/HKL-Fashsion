@@ -23,7 +23,7 @@ function ListTypeProductMobile(props) {
   }, [props._id]);
 
   return (
-    <li className="each-type-product-mobile">
+    <li key={props.key} className="each-type-product-mobile">
       <Link to={"/Products/Type/" + props._id}>{props.name}</Link>
       <img src={arrowbottom} alt="arrowbottom" onClick={openDetail} />
       <ul className="detail-product-mobile">

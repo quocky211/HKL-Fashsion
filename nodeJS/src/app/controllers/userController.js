@@ -1,7 +1,6 @@
 const httpError = require('http-errors');
 const { userValidate, loginValidate, phoneValidate } = require('../../helpers/validation');
 const { signAccessToken, signRefreshToken, verifyRefreshToken } = require('../../helpers/jwt_service');
-const client = require('../../helpers/connection_redis');
 const Order = require('../models/order/order');
 const OrderDetail = require('../models/order/order_detail');
 const User = require('../models/user/user');
@@ -34,7 +33,7 @@ class UserController {
             user.save()
                 .then(() => {
                     res.status(201).json({
-                        message: "Đăng ký thành công",
+                        message: 'Đăng ký thành công',
                     });
                 })
                 .catch(() => {
@@ -84,11 +83,13 @@ class UserController {
 
             const accessToken = await signAccessToken(user._id);
             const refreshToken = await signRefreshToken(user._id);
-            res.json({
-                accessToken,
-                refreshToken,
-                user,
-            });
+            const jsonUser = {
+                _id: user._id,
+                email: user.email,
+                name: user.name,
+                level: user.level,
+            };
+            res.json({ accessToken, refreshToken, jsonUser });
         } catch (error) {
             next(error);
         }
@@ -139,11 +140,6 @@ class UserController {
             await User.updateOne({ _id: req.params.id }, req.body)
                 .then(() => {
                     res.send('Cập nhật dữ liệu thành công');
-                    // Xóa cache người dùng khỏi Redis
-                    client.del(`user:${req.params.id}`, (err) => {
-                        if (err) throw err;
-                        else console.log('Đã xóa cache người dùng khỏi Redis');
-                    });
                 })
                 .catch(() => res.send('Cập nhật dữ liệu thất bại'));
         } catch (error) {

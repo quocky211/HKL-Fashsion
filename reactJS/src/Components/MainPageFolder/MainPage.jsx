@@ -126,8 +126,9 @@ function MainPage() {
                     <h2 className="onSale_name title-name">Giảm giá</h2>
                     <div className="non-mobile">
                         <Slider {...settings}>
-                            {discountProducts.map((item) => (
+                            {discountProducts.map((item, index) => (
                                 <ContainerItem
+                                    key={index}
                                     price={item.product.price}
                                     name={item.product.name}
                                     image={item.path}

@@ -9,7 +9,6 @@ const cors = require('cors');
 
 const path = require('path');
 require('dotenv').config();
-require('./src/helpers/connection_redis');
 
 // morgan: bắn ra log khi gửi yêu cầu lên server
 app.use(morgan('dev'));

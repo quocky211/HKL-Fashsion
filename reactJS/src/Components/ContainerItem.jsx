@@ -28,7 +28,7 @@ export function ContainerItem(props) {
   };
 
   return (
-    <div className="containerItem">
+    <div key={props.key} className="containerItem">
       {/* // masp ở đây là cái éo gì mà đổi sang _id lại không chạyyyy */}
       <Link to={"/Products/" + props.masp} state={{ image: props.image }}>
         

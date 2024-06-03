@@ -1,15 +1,13 @@
-import axios from "axios";
+import axiosInstance from './axiosConfig';
+
 class BlogDataService {
 
     async getAllBlog() {
-
-        return await axios.get("http://localhost:3001/blog");
+        return await axiosInstance.get("/blog");
     }
+    
     async getBlogById(blogID) {
-
-        return await axios.get(
-            `http://localhost:3001/blog/blog-detail/${blogID}`
-        );
+        return await axiosInstance.get( `/blog/blog-detail/${blogID}`);
     }
 
 }

@@ -21,8 +21,8 @@ function ListTypeProduct(props)
                 {props.name}
                 <ul className="detail-product">
                     {
-                        catagoryDetails.map((item) => item.category_id === props._id && (
-                            <Link to={"/Products/TypeDetail/" + item._id}>
+                        catagoryDetails.map((item, index) => item.category_id === props._id && (
+                            <Link key={index} to={"/Products/TypeDetail/" + item._id}>
                                 <li>{item.name}</li>
                             </Link>
                         ))

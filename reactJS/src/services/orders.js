@@ -1,42 +1,33 @@
-import axios from "axios";
+import axiosInstance from './axiosConfig';
+
 class OrderDataService {
   async createOrders(data) {
-    const res = await axios.post(
-      "http://localhost:3001/order/create",
-      data
-    );
+    const res = await axiosInstance.post("/order/create", data);
     return res;
   }
+
   async createOrderDetail(data) {
-    return await axios.post(
-      "http://localhost:3001/order/order-detail",
-      data
-    );
+    return await axiosInstance.post("/order/order-detail", data);
   }
+
   async getOrderDetail(orderId) {
-    return await axios.get(
-      `http://localhost:3001/order/${orderId}/order-detail`
-    );
+    return await axiosInstance.get(`/order/${orderId}/order-detail`);
   }
+
   async getAllOrders() {
-    return await axios.get(
-      'http://localhost:3001/admin/order/show/'
-    );
+    return await axiosInstance.get('/admin/order/show/');
   }
+
   async deleteOrder(orderId) {
-    return await axios.delete(
-      `http://localhost:3001/admin/order/${orderId}/delete`
-    );
+    return await axiosInstance.delete(`/admin/order/${orderId}/delete`);
   }
+
   async editOrder(orderId, data) {
-    return await axios.put(
-      `http://localhost:3001/admin/order/${orderId}/change-status`, data
-    );
+    return await axiosInstance.put(`/admin/order/${orderId}/change-status`, data);
   }
+  
   async getRevenue(year) {
-    return await axios.get(
-      `http://thawing-hollows-39647.herokuapp.com/admin/revenue?year=${year}`
-    );
+    return await axiosInstance.get(`/admin/revenue?year=${year}`);
   }
 }
 export default new OrderDataService();

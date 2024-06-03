@@ -141,8 +141,9 @@ function HeaderDefault(props) {
                             id="product-list-mobile"
                         />
                         <ul className="type-mobile-product">
-                            {catagories.map((item) => (
+                            {catagories.map((item, key) => (
                                 <ListTypeProductMobile
+                                    key={key}
                                     _id={item._id}
                                     name={item.name}
                                 />
