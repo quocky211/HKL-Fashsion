@@ -1,0 +1,204 @@
+.breadcrumb a{
+    color: black;
+}
+.main-container-ship{
+    margin-top: 60px;
+}
+.container-ship{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+.nav ul{
+    display: flex;
+    list-style-type: none;
+}
+.nav ul li{
+    margin:0 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav ul li:nth-child(2){
+    color: darkblue;
+}
+.nav ul li:hover{
+    color: darkblue;
+}
+/* Main */
+.form-address-container{
+    width: 80%;
+    margin: auto;
+}
+.form-address input,
+.form-address select,
+.form-address textarea {
+    display: block;
+    padding: 12px;
+    font-size: 18px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: solid 1px gray;
+    transition: all 0.3s ease;
+    color: black;
+}
+.form-address input:focus-visible,
+.form-address select:focus-visible,
+.form-address textarea:focus-visible {
+    box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.5);
+    outline: none;
+}
+.form-address > input{
+    width: 100%;
+}
+.mail-phone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.detail-address{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+}
+.btn-Submit{
+    font-size: 18px;
+    background-color: #6851A8;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 25px 0;
+    color: white;
+}
+.btn-Submit:hover{
+    background-color: #9f8cd4;
+    cursor: pointer;
+}
+textarea{
+    width: 100%;
+    font-size: 18px;
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.container-ship-right .voucher{
+    margin: 10px 0;
+    text-align: left;
+    padding: 0 65px;
+}
+.container-ship-right .voucher input{
+    padding: 12px;
+    font-size: 18px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: solid 1px gray;
+    transition: all 0.3s ease;
+}
+.container-ship-right .voucher input:focus-visible{
+    box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.5);
+    outline: none;
+}
+.btn-Submit,
+.container-ship-right .voucher button{
+    font-size: 18px;
+    background-color: #6851a8d2;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-Submit:hover,
+.container-ship-right .voucher button:hover{
+    background-color: #6851A8;
+    box-shadow: 0 0 4px 1px #6851a84f;
+    cursor: pointer;
+}
+.container-ship-right .price{
+    padding: 0 65px;
+}
+.container-ship-right .price p{
+    text-align: left;
+}
+.payment-methods .the-payment-method{
+    text-align: left;
+    padding-left: 65px;
+    margin: 15px 0;
+}
+.payment-methods .the-payment-method label:hover{
+    cursor: pointer;
+}
+.payment-methods .the-payment-method input[type="radio"]{
+    width: 18px;
+    height: 18px;
+}
+.payment-methods .the-payment-method img{
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+}
+.payment-methods .the-payment-method span{
+    font-size: 18px;
+}
+.product-checkout-list{
+    text-align: left;
+    padding: 0 65px;
+}
+.price span{
+    background-color: #e5faf2;
+    color: red;
+    border-radius: 10px;
+    border: none;
+    padding: 7px 5px;
+    font-weight: 600;
+}
+@media only screen and (min-width: 46.25em) and (max-width: 64.2em) {
+    .container-ship{
+        display: block;
+    }
+    .container-ship-right{
+        display: inline-block;
+    }
+    .listPrice{
+        margin: 20px 0;
+    }
+    .choosePayment{
+        margin-top: 50px;
+    }
+
+}
+@media only screen and (max-width: 46.1875em)
+{
+    .container-ship{
+        display: block;
+    }
+    .form-address-container {
+        width: 90%;
+    }
+    .form-address-container .mail-phone,
+    .form-address-container .detail-address {
+        display: block;
+    }
+    .form-address-container .mail-phone input,
+    .form-address-container .detail-address select {
+        width: 100%;
+    }
+    .container-ship-right{
+        display: inline-block;
+    }
+    .container-ship-right .voucher {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .container-ship-right .voucher input {
+        margin: 0;
+    }
+    .listPrice{
+        margin: 20px 0;
+    }
+    .choosePayment{
+        margin-top: 50px;
+    }
+    .payment-methods .the-payment-method {
+        padding: 0;
+    }
+}

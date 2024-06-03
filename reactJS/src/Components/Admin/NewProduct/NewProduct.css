@@ -1,0 +1,70 @@
+.container-admin{
+    display: flex;
+    margin-top: 60px;
+    background-color: #f2f8ff;
+}
+
+.newProduct .newProductTitle {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+.newProduct{
+    flex: 4;
+    /* padding: 20px; */
+}
+.newProductForm{
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.newProductItem{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-align: left;
+}
+.newProductItem>label{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: gray;
+}
+.newProductItem>input{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.newProductItem>select{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: gray;
+}
+
+.newProductItem>input[type="file"]{
+    border: none;
+}
+.newProductButton{
+    width: 200px;
+    border: none;
+    background-color: #19caed;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newProductButton:hover {
+    background-color: #10a8f4;
+    font-weight: bold;
+    box-shadow: 0 0 10px #19caed;
+}

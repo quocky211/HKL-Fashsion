@@ -1,0 +1,127 @@
+.container-admin {
+    display: flex;
+    margin-top: 60px;
+}
+.orderDetailAdmin {
+    flex: 4;
+    background-color: #f2f8ff;
+}
+.orderInfor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.orderInfor .orderInforItem {
+    flex: 1;
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    background-color: #fff;
+    margin-top: 20px;
+}
+.orderInfor .orderInforItem .editStatusBtn {
+    border-radius: 5px;
+    background-color: #8edee1;
+    color: #fff;
+    margin-left: 10px;
+    padding: 3px 10px;
+    border: 1px solid #8edee1;
+}
+
+.orderInfor .orderInforItem .editStatusBtn:hover {
+    background-color: #4ec1c5;
+    font-weight: bold;
+    box-shadow: 0 0 7px #64dade;
+}
+.orderInfor .orderInforItem .orderInfortitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.orderInforDetail span {
+    font-style: italic;
+    color: #757272;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.orderInforItem .orderInforDetail p {
+    margin: 5px 0;
+}
+.orderInforItem .orderInforDetail .success {
+    color: #09c61c;
+    text-transform: initial;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.orderInforItem .orderInforDetail .fail {
+    color: #e80808;
+    text-transform: initial;
+    font-style: italic;
+}
+
+.orderInforDetail select {
+    padding: 5px;
+}
+
+.orderProducts {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+.orderProductsTable {
+    width: 100%;
+    display: table;
+    border-radius: 10px;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    background-color: #fff;
+}
+.orderProductsTable thead {
+    display: table-header-group;
+}
+
+.orderProductsTable thead th {
+    display: table-cell;
+    padding: 20px 15px;
+    color: #5b5d5e;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #2289ff;
+}
+.orderProductsTable tbody tr {
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+.orderProductsTable tbody tr td {
+    border: none;
+    display: table-cell;
+    padding: 20px 15px;
+    color: rgb(36, 36, 36);
+    vertical-align: top;
+    min-width: 100px;
+}
+.orderProductItem {
+    display: flex;
+}
+.orderProductItem img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.orderProductItem .orderProductInfor {
+    text-align: left;
+}
+
+.orderProductItem .orderProductInfor button {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(24, 158, 255);
+    font-size: 16px;
+    color: rgb(24, 158, 255);
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}

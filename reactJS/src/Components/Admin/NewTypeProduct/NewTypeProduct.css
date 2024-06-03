@@ -1,0 +1,76 @@
+.container-admin {
+    display: flex;
+    margin-top: 60px;
+    background-color: #f2f8ff;
+}
+.newTypeProduct {
+    flex: 4;
+}
+.newTypeProductForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.newTypeProductItem {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-align: left;
+}
+.newTypeProductTitle {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+.newTypeProductItem > label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: gray;
+}
+.newTypeProductItem > input {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.newTypeProductItem > select {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+}
+.newTypeProductItem > textarea {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.newTypeProductItem > input[type="file"] {
+    border: none;
+}
+.newTypeProductButton {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #19caed;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newTypeProductButton:hover {
+    background-color: #10a8f4;
+    font-weight: bold;
+    box-shadow: 0 0 10px #19caed;
+}

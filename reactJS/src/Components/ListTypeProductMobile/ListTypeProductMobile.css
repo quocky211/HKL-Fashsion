@@ -1,0 +1,31 @@
+
+
+.each-type-product-mobile{
+    list-style-type: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+}
+.each-type-product-mobile a{
+    color: black;
+    text-decoration: none;
+} 
+.each-type-product-mobile a:active,
+.each-type-product-mobile a:hover{
+    color: black;
+    text-decoration: none;
+} 
+
+.each-type-product-mobile img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+}
+.detail-product-mobile{
+    text-decoration: none;
+}
+.detail-product-mobile li{
+    list-style-type: none;    
+    padding: 8px 0;
+
+}

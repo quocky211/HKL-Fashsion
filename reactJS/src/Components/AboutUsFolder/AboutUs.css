@@ -1,0 +1,125 @@
+.aboutus-container {
+    margin-top: 60px;
+}
+.breadcrumb a {
+    color: black;
+}
+.about-content{
+    padding: 80px 15px;
+}
+.about-content h1{
+    color: #000000;
+    font-family: "FuturaNowHeadline-XLight", Sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 50px;
+    margin-bottom: 26px;
+}
+.about-content h2{
+    font-size: 24px;
+    font-family: "SVN-Futura Medium", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 400;
+}
+.about-content h3{
+    color: #000000;
+    font-family: "FuturaNowHeadline-XLight", Sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 23px;
+}
+.about-content p{
+    color: #000000;
+    font-family: "FuturaNowHeadline-XLight", Sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 23px;
+    text-align: justify;
+    padding: 0 50px;
+}
+
+.about-content img{
+    margin: 50px 0;
+}
+.main-about-content{
+    max-width: 167rem;
+}
+.main-about-content img{
+    max-width: 100%;
+}
+/* .main-about-content map{
+    height: 40rem;
+} */
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    justify-content: space-evenly;
+}
+.contact .map iframe{
+    z-index: 3;
+    height: 55vh;
+    width: 100%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 0px;
+    touch-action: pan-x pan-y;
+    cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur), default;
+}
+.contact_info{
+    font-size: 1.2rem;
+    font-style: normal;
+}
+.contact_address ul.list_info li:first-child{
+    list-style-type: none;
+    text-align: left;
+}
+.contact_address ul.list_info li{
+    list-style-type: square;
+    text-align: left;
+}
+.contact_time ul.list_info li{
+    list-style-type: square;
+    text-align: left;
+}
+@media only screen and (min-width: 46.25em) and (max-width: 64.2em){
+    .contact .map iframe{
+        height: 35vh;
+    }
+}
+@media only screen and (max-width: 46.1875em) {
+    .about-content h2{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .about-content h1{
+        font-size: 24px;
+    }
+    .about-content h3{
+        font-size: 16px;
+    }
+    .about-content p{
+        padding: 0;
+    }
+    .about-content{
+        padding: 80px 16px 0px 16px;
+    }
+    /* .main-about-content iframe{
+        height: 70%;
+    } */
+    .contact{
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1.2fr;
+    }
+    .contact_info{
+        font-size: 1rem;
+    }
+    .contact .map iframe{
+        height: 40vh;
+    }
+}

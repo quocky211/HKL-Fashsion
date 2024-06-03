@@ -1,0 +1,13 @@
+.container-admin{
+    display: flex;
+    margin-top: 60px;
+
+}
+.home-admin{
+    flex: 4;
+    background-color: #f2f8ff;
+}
+.homeWidgets{
+    display: flex;
+    margin: 20px;
+}

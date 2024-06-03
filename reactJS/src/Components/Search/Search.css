@@ -1,0 +1,28 @@
+.search-page {
+    margin-top: 60px;
+}
+.search-list-products{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 70px;
+    column-gap: 15px;
+    padding: 0 40px 40px;
+}
+.search-list-products button {
+    background: none;
+    border: none;
+}
+@media only screen and (min-width: 46.25em) and (max-width: 64em) {
+    .search-list-products{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 50px;
+    }
+ }
+ @media only screen and (max-width: 46.1875em)
+{
+    .search-list-products{
+        margin-top: 50px;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 48px;
+    }
+}

@@ -1,0 +1,219 @@
+.product-detail-container {
+  margin-top: 60px;
+}
+.product-detail {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 16px;
+}
+.product-detail-left {
+  display: block;
+  width: 100%;
+}
+.product-detail-left img {
+  width: 80%;
+  height: 600px;
+  object-fit: cover;
+}
+.product-detail-right {
+  text-align: left;
+}
+.product-detail-right .text.product-detail_name,
+.product-detail-right .text.product-detail_price {
+  text-transform: uppercase;
+}
+.product-detail-right p {
+  padding: 16px 0;
+  font-size: 16px;
+}
+.quantity-product p {
+  display: contents;
+}
+.quantity-product input {
+  margin-left: 16px;
+}
+.product-detail-right .addcart button {
+  padding: 8px 49px;
+  margin-top: 30px;
+  background-color: #47474c;
+  color: white;
+  position: relative;
+}
+.product-detail-right .addcart button:hover {
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
+  border: 1px solid #000;
+  background-color: #000;
+  transition: 0, 3s linear;
+}
+.product-detail-right .addcart img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.product-detail-right .addcart .like-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(112, 112, 112, 0.3);
+  margin-left: 16px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.product-detail-right .accordion-item:last-child h2 {
+  padding-bottom: 0 !important;
+}
+.product-detail-right .addcart .like-icon:hover {
+  animation: bigbabol 0.5s linear;
+  border: 1px solid #000;
+}
+.accordion-header button {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.product-detail-right .accordion-item:last-child .accordion-body {
+  text-align: justify;
+}
+.related-product h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.related-product_containerItem {
+  padding: 0 12px;
+}
+.related-product p {
+  font-size: 18px;
+  font-family: "SVN-Futura Medium", sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+}
+.mobile-related {
+  display: none;
+}
+.boder-red{
+  border: 2px solid red !important;
+}
+
+.color {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.color button {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.size {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.size button {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  border: #47474c;
+  border-style: groove;
+  border-width: 1px;
+}
+.size button:focus {
+  background-color: antiquewhite;
+}
+.quantity-product {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.quantity {
+  width: 40px;
+  text-align: center;
+}
+.add {
+  font-size: 20px;
+  border: #47474c;
+  border-style: groove;
+  border-width: 1px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin {
+  margin-left: 20px;
+}
+.favorite-icon {
+  color: red;
+  width: 30px;
+  padding-left: 6px;
+  padding-top: 6px;
+}
+.non-mobile-related .slick-next{
+  right: 25px;
+}
+.non-mobile-related .slick-prev{
+  left: 25px;
+}
+.non-mobile-related .slick-slide {
+  width: 319px !important;
+}
+.non-mobile-related .slick-slider .slick-list {
+  width: 90vw;
+  margin: auto;
+}
+.slick-prev:before, .slick-next:before {
+  color: black !important;
+}
+.slide_detail{
+  margin: 0 50px;
+}
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+  .non-mobile-related {
+    display: none;
+  }
+  .mobile-related {
+    display: block;
+  }
+  /* .mobile-related .slick-slider{
+    width: 90vw;
+    margin: auto;
+  }
+  .mobile-related .slick-slider .slick-list .slick-track .slick-slide {
+    width: 30vw !important;
+  } */
+}
+@media only screen and (max-width: 46.1875em) {
+  .slide_detail{
+    margin: 0 10px;
+  }
+  .product-detail {
+    display: block;
+  }
+  .product-detail-left img {
+    top: 15%;
+    height: 85%;
+  }
+  .product-detail-right h2 {
+    font-size: 18px;
+  }
+  .product-detail-right p {
+    font-size: 14px;
+  }
+  .related-product h3 {
+    font-size: 18px;
+  }
+  .non-mobile-related {
+    display: none;
+  }
+  .related-product p {
+    font-size: 14px;
+  }
+  .mobile-related {
+    display: flex;
+  }
+}

@@ -1,0 +1,58 @@
+.container-admin {
+    display: flex;
+    margin-top: 60px;
+    background-color: #f2f8ff;
+}
+.userlist {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userlist h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.userlist .box_container {
+    margin-top: 30px;
+    /* margin-left: 20px; */
+    background-color: #fff;
+}
+
+.userlist .box_container .MuiDataGrid-columnHeaderTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.userListUser {
+    display: flex;
+    align-items: center;
+}
+.userListImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.userListEdit {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #10a8f4;
+    margin-right: 20px;
+}
+.userListDelete {
+    color: red;
+    cursor: pointer;
+    background: none;
+}
+
+.userlist .MuiTablePagination-selectLabel,
+.MuiTablePagination-displayedRows {
+    margin: 14px 0;
+}

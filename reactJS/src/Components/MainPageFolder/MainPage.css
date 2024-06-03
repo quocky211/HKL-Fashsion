@@ -1,0 +1,141 @@
+#slider_mainpage .slick-slide {
+    margin: 0 8px;
+
+}
+.mainPage {
+    /* padding-top: 20px; */
+}
+/* Banner */
+.slider .slide img{
+    object-fit: fill;
+}
+/* New Products */
+.newProducts,
+.bestSeller,
+.onSale {
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 120px 80px;
+}
+.title-name {
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 2px 1px 2px rgb(255, 0, 0);
+}
+.newProducts_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide,
+.bestSeller_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide,
+.onSale_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide{
+    width: 220px !important;
+}
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
+.img-mobile{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 150%;
+    overflow: hidden;
+    display: none;
+    margin-top: 70px;
+}
+.img-mobile img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.mobile{
+    display: none;
+    flex-wrap: wrap;
+}
+.newProducts,
+.onSale {
+    background: url('../Images/banner/slider8.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+.newProducts::before,
+.onSale::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.6); /* Màu đen với độ trong suốt 50% */
+  }
+  .newProducts {
+    padding-top: 40px;
+  }
+@media only screen and (min-width: 46.25em) and (max-width: 1198px) {
+    .newProducts_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide,
+.bestSeller_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide,
+.onSale_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide{
+    width: 200px !important;
+}
+.newProducts, .bestSeller, .onSale {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 50px;
+}
+    .slick-next::before{
+        display: none;
+    }
+    .slick-prev::before{
+        display: none;
+    }
+    .newProducts,
+    .bestSeller,
+    .onSale {
+        width: 100%;
+        margin: auto;
+    }
+ 
+}
+@media only screen and (max-width: 46.1875em){
+    .newProducts_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide,
+.bestSeller_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide,
+.onSale_product .non-mobile .slick-slider .slick-list .slick-track .slick-slide{
+    width: 140px !important;
+}
+    .newProducts, .bestSeller, .onSale {
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 20px;
+    }
+    .title-name {
+        font-size: 18px;
+     
+    }
+
+    .img-mobile{
+        display: block;
+    }
+    .slick-next::before{
+        display: none;
+    }
+    .slick-prev::before{
+        display: none;
+    }
+    .newProducts,
+    .bestSeller,
+    .onSale {
+        width: 100%;
+        margin: auto;
+    }
+    .title-name-first{
+        margin-top: 0;
+        padding: 0;
+    }
+   
+}

@@ -1,0 +1,76 @@
+.container-admin {
+    display: flex;
+    margin-top: 60px;
+}
+.orderList {
+    flex: 4;
+    background-color: #f2f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.orderList h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.tableOrderList {
+    margin-top: 30px;
+    /* margin-left: 5px; */
+    background-color: #fff;
+}
+.tableOrderList .orderPrice {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+.tableOrderList .orderPayMethod {
+    text-transform: uppercase;
+    font-style: italic;
+    background-color: #57758d;
+    border-radius: 7px;
+    color: #08d371;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.tableOrderList .orderStatus {
+    background-color: #ebeef2;
+    color: #1b9dd4;
+    padding: 10px 5px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+.tableOrderList .orderDate {
+    background-color: #e8e9f7;
+    color: #e48f9e;
+    padding: 10px 5px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+.tableOrderList .orderDisplayBtn {
+    background: none;
+    border: none;
+    background-color: #eeeef7;
+    color: #555;
+    border-radius: 5px;
+}
+.tableOrderList .orderDeleteBtn {
+    color: red;
+}
+.tableOrderList .btn-primary {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.tableOrderList .MuiTablePagination-selectLabel,
+.tableOrderList .MuiTablePagination-displayedRows {
+    margin: 14px 0;
+}
+
+.tableOrderList .MuiDataGrid-columnHeaderTitle {
+    font-size: 16px;
+    font-weight: bold;
+}

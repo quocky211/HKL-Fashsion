@@ -1,0 +1,269 @@
+# trang admin:
+# list sản phẩm GET /admin/product?page=:page(có phân trang) (D)
+GET http://localhost:3001/admin/product
+
+### thêm sản phẩm: /admin/product/store (D)
+POST http://localhost:3001/admin/product/store
+Content-Type: application/json
+
+{
+    "category_id": 2,
+    "category_detail_id": 19,
+    "name": "Test add product",
+    "description": "descriptiondescriptiondescrip",
+    "price": 100000,
+    "discount": 0.01,
+    "material": "materialmaterial"
+
+}
+
+### thêm chi tiết sản phẩm: /admin/product-detail/store (D)
+POST http://localhost:3001/admin/product-detail/store
+Content-Type: application/json
+
+{
+    "product_id": 1,
+    "color": "green",
+    "size": "sizesizesizesizesizesizesizesizesizesizesizes",
+    "path":"imagetest.png",
+    "qty": 1000
+}
+
+### xoa chi tiet
+
+DELETE http://localhost:3001/admin/product-detail/delete/1002
+
+### sửa sản phẩm: /admin/product/edit/:id (D)
+PUT http://localhost:3001/admin/product/edit/91
+Content-Type: application/json
+
+{
+    "category_id": 2,
+    "category_detail_id": 19,
+    "name": "Test add productttttttttttttttttttttttt",
+    "description": "descriptiondescriptiondescrip",
+    "price": 100000,
+    "discount": 0.01,
+    "material": "materialmaterial",
+}
+
+### xóa sản phẩm: /admin/product/delete/:id (D)
+DELETE  http://localhost:3001/admin/product/delete/91
+
+### list user có level = false /user/
+### /admin/user/show?page=:page (có phân trang)
+GET http://localhost:3001/admin/user/show
+
+### thêm user /admin/user/store (chưa xong)
+POST http://localhost:3001/admin/user/store
+Content-Type: application/json
+
+{
+    "email": "1@gmail.com",
+    "password":"123456",
+    "name": "Minh Hau",
+    "gender":"Nam",
+    "address":"HCM",
+    "birthday": "2002-05-16",
+    "phone":"0987654321"
+}
+
+### sửa user /admin/user/edit/:id
+PUT  http://localhost:3001/admin/user/edit/51
+Content-Type: application/json
+
+{
+    "gender":"Nam"
+}
+
+### xóa user /admin/user/delete/:id
+DELETE http://localhost:3001/admin/user/delete/4
+
+
+### show order /admin/order/show/
+GET http://localhost:3001/admin/order/show/
+
+### show order-detail dựa vào order_id /admin/order/:id/order-detail
+GET http://localhost:3001/admin/order/82/order-detail
+
+### thay đổi trạng thái đơn hàng /admin/order/:id/change-status
+PUT http://localhost:3001/admin/order/81/change-status
+Content-Type:  application/json
+
+{
+    "status": "Đã xác nhậnn"
+}
+
+### lấy doanh thu theo năm
+GET http://localhost:3001/admin/revenue?year=2023
+
+### xóa đơn đơn hàng /admin/order/:id/delete
+DELETE http://localhost:3001/admin/order/82/delete
+
+### trang danh sách sản phẩm, có bộ lọc và phân trang
+### price=1 price < 100000
+### price=2 100000 <= price < 300000
+### price=3 300000 <= price < 500000
+### price=4 price >= 500000
+### lọc cate_detail: category_detail_id=1
+GET http://localhost:3001/product?price=0&page=1&null
+### search header GET /search?name=:name (có phân trang) (D)
+GET http://localhost:3001/search?name=levent
+
+### sản phẩm giảm giá: /product/discount (D)
+GET http://localhost:3001/product/discount
+
+
+
+### lấy chi tiết sản phẩm dựa theo product_id
+### lấy size theo màu
+### /product/:id/product-detail?color:color
+### lưu ý là từ phía sau dấu "?" không có cũng không sao
+### ví dụ http://localhost:3001/product/5/product-detail vẫn chạy được
+GET http://localhost:3001/product/47/product-detail?color=#989898
+
+### lấy chi tiết của 1 sản phẩm dựa theo product_id /product/:product_id/product-detail (D)
+GET http://localhost:3001/product/5/product-detail
+
+### lấy sản phẩm dựa theo _id /product/:id (D)
+GET http://localhost:3001/product/15
+
+### bán chạy: /product/top-selling (D)
+GET http://localhost:3001/product/top-selling
+
+### sản phẩm mới: /product/new (D)
+GET http://localhost:3001/product/new
+
+### lấy chi tiết loại sản phẩm /product/category-detail
+GET http://localhost:3001/product/category-detail
+
+### lấy sản phẩm theo loại sản phẩm: /product/category/:id (D)
+GET http://localhost:3001/product/category/2
+
+### lấy sản phẩm theo chi tiết loại sản phẩm: /product/category-detail/:id (D)
+GET http://localhost:3001/product/category-detail/13
+
+###Lấy category theo id
+
+GET http://localhost:3001/category/1
+
+### lấy sp
+GET http://localhost:3001/product/
+
+### lấy category (D)
+GET http://localhost:3001/category
+
+### lấy category-detail dựa vào category
+###GET http://localhost:3001/category/:id/category-detail (D)
+GET http://localhost:3001/category/3/category-detail
+
+### lấy ra 1 category-detail dựa vào _id
+###GET http://localhost:3001/category-detail/:id (D)
+GET http://localhost:3001/category-detail/2
+
+### lấy list outfit /product/outfit có phân trang mỗi trang có 12 outfit
+GET http://localhost:3001/product/outfit?page=2
+
+### lấy outfit
+GET http://localhost:3001/product/outfit/
+
+### lấy 1 outfit bằng _id /product/outfit/:id
+GET http://localhost:3001/product/outfit/1
+
+
+### lấy chi tiết outfit bằng outfit_id /product/outfit/:id/outfit-detail
+GET http://localhost:3001/product/outfit/1/outfit-detail
+
+
+###refresh-token
+POST  http://localhost:3001/user/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI0LCJpYXQiOjE2ODE2MjI1NzMsImV4cCI6MTcxMzE4MDE3M30.HXsfA-MF4pDxJv5XJvQYh204Iuw0B0lpaMH8WiFx_Sk"
+}
+
+###Lấy ra 1 user qua _id /user/:id
+GET  http://localhost:3001/user/10
+
+###Lấy ra hóa đơn của 1 user qua user_id /user/:id/order
+GET  http://localhost:3001/user/42/order
+
+### lấy chi tiết hóa đơn qua order_id /order/:id/order-detail
+GET http://localhost:3001/order/69/order-detail
+
+### lấy ra 1 chi tiết hóa đơn /order/order-detail/:id
+GET http://localhost:3001/order/order-detail/1
+
+### resgister
+POST  http://localhost:3001/user/register
+Content-Type: application/json
+
+{
+    "email": "20521301@gm.uit.edu.vn",
+    "password":"123456",
+    "confirmPassword": "123456",
+    "name": "Minh Hau",
+    "gender":"Nam",
+    "address":"HCM",
+    "phone":"0987654321",
+    "birthday": "2002-05-16",
+    "level": true
+}
+
+### login
+POST  http://localhost:3001/user/login
+Content-Type: application/json
+
+{
+    "email": "quockynguyen02@gmail.com",
+    "password":"1234567"
+}
+
+###
+GET   http://localhost:3001/user/test-get-list-user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI0LCJpYXQiOjE2ODE2MjIwNDMsImV4cCI6MTY4MTcwODQ0M30.uxTC21xUKB-_iU7MmIoGOxhFYVAh_YxwWojmVcB0LxM
+
+
+### logout
+DELETE   http://localhost:3001/user/logout
+Content-Type:  application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI0LCJpYXQiOjE2ODE4OTMxMTQsImV4cCI6MTcxMzQ1MDcxNH0.TnU-qXWsB6aVJQP1dm9MP1Y_rshM29Y8Jtxcky4rMDQ"
+}
+
+###edit user: /user/:id
+PATCH http://localhost:3001/user/10
+Content-Type:  application/json
+
+{
+    "phone": "0972389257"
+
+}
+
+###lấy comment của 1 sản phẩm /product/:id/comment
+GET http://localhost:3001/product/4/comment
+
+### đếm số comment trong 1 sản phẩm
+GET http://localhost:3001/product/4/count-and-starrating-comment
+
+
+###thêm comment sản phẩm /user/:user_id/product/:product_id/comment
+POST http://localhost:3001/user/10/product/10/comment
+Content-Type:  application/json
+
+{
+    "star": 5,
+    "message": "messagemessagemessagemessage"
+}
+
+###kiểm tra xem user đã mua sản phẩm hay chưa /user/:user_id/product/:product_id/bought (chưa xong)
+GET http://localhost:3001/blog/blog-detail/1
+
+##API
+
+GET http://localhost:3001/blog
+
+### xoá comment
+DELETE   http://localhost:3001/user/10/comment/123/delete

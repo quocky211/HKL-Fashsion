@@ -1,0 +1,158 @@
+.orderDetails{
+    margin-top: 80px;
+}
+.orderInfor{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.orderInfor .orderInforItem{
+    flex: 1;
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+}
+.orderInfor .orderInforItem .orderInfortitle{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.orderInforDetail span{
+    font-style: italic;
+    color:rgb(120, 120, 120);
+    margin-right: 12px;
+}
+.orderInforItem .orderInforDetail p{
+    margin: 5px 0;
+}
+.orderInforItem .orderInforDetail .success{
+    color: yellowgreen;
+    text-transform: initial;
+    font-style: italic;
+}
+.orderProducts{
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.orderProductsTable{
+    width: 100%;
+    display: table;
+    border-radius: 4px;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+
+}
+.orderProductsTable thead{
+    display: table-header-group;
+}
+
+.orderProductsTable thead th{
+    display: table-cell;
+    padding: 20px 15px;
+    color: rgb(120, 120, 120);
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(218, 198, 198);
+}
+.orderProductsTable tbody tr{
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+.orderProductsTable tbody tr td{
+    border: none;
+    display: table-cell;
+    padding: 20px 15px;
+    color: rgb(36, 36, 36);
+    vertical-align: top;
+    min-width: 100px;
+}
+.orderProductItem{
+    display: flex;
+}
+.orderProductItem img{
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.orderProductItem .orderProductInfor{
+    text-align: left;
+}
+
+.orderProductItem .orderProductInfor button{
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(24, 158, 255);
+    font-size: 16px;
+    color: rgb(24, 158, 255);
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.orderProductsTable-Mobile{
+    display: none;
+    border-radius: 4px;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+}
+.orderItem-Mobile{
+    display: flex;
+
+}
+.orderItem-Mobile{
+    padding:  15px 0;
+    border-bottom: 1px solid #ccc;
+}
+.orderItem-Mobile img{
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.orderProduct-Mobile{
+    font-size: 16px;
+    text-align: left;
+}
+.orderProduct-Mobile span{
+    font-style: italic;
+    color: #ccc;
+}
+.orderItem-Mobile .buttonDetail{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.orderItem-Mobile button{
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(24, 158, 255);
+    font-size: 16px;
+    color: rgb(24, 158, 255);
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .orderInfor .orderInforItem .orderInfortitle{
+        font-size: 16px;
+    }
+    .orderInforItem .orderInforDetail p{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 46.1875em)
+{
+    .orderInfor{
+        display: block;
+    }
+    .orderInfor .orderInforItem{
+        margin: 10px;
+    }
+    .orderProductsTable{
+        display: none;
+    }
+    .orderProductsTable-Mobile{
+        display: block;
+    }
+}
